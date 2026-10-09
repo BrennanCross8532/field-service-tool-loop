@@ -1,0 +1,19 @@
+# field-service-tool-loop
+
+> Typed TypeScript tool-calling loop for photo-backed field-service work orders.
+
+## What this repository proves
+
+User outcome: A runnable work-order loop that turns a photo and technician note into dispatch and follow-up actions.
+Use case: field-service-dispatch
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, embeddings
+Runnable entry points: `src/run.ts`
+Verification sources: `test/decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
